@@ -78,9 +78,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>D:\vs2022\solution\finddevs_example\x64\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>D:\vs2022\solution\finddevs_example\x64\Debug\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -114,15 +116,17 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;HAVE_REMOTE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_REMOTE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\vs2022\solution\finddevs_example\Include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\vs2022\solution\finddevs_example\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>D:\vs2022\solution\finddevs_example\Lib\Packet.lib;D:\vs2022\solution\finddevs_example\Lib\wpcap.lib;D:\vs2022\solution\finddevs_example\Lib\x64\Packet.lib;D:\vs2022\solution\finddevs_example\Lib\x64\wpcap.lib</AdditionalDependencies>
+      <OutputFile>D:\vs2022\solution\finddevs_example\x64\Debug\finddevs_example.exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,9 +135,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_REMOTE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\vs2022\solution\finddevs_example\Include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,6 +147,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\vs2022\solution\finddevs_example\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>D:\vs2022\solution\finddevs_example\Lib\Packet.lib;D:\vs2022\solution\finddevs_example\Lib\wpcap.lib;D:\vs2022\solution\finddevs_example\Lib\x64\Packet.lib;D:\vs2022\solution\finddevs_example\Lib\x64\wpcap.lib</AdditionalDependencies>
+      <OutputFile>D:\vs2022\solution\finddevs_example\x64\Debug\finddevs_example.exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

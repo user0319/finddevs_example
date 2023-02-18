@@ -1,8 +1,9 @@
+
 #include<pcap.h>
 #include<stdlib.h>
 #include <sys/types.h>
 #include<time.h>
-/* packet handler 函数原型 */
+
 void packet_handler(u_char* param, const struct pcap_pkthdr* header, const u_char* pkt_data);
 
 int main()
@@ -86,8 +87,8 @@ void packet_handler(u_char* param, const struct pcap_pkthdr* header, const u_cha
     /* 将时间戳转换成可识别的格式 */
 
     local_tv_sec = header->ts.tv_sec;
-    localtime_s(&ltime,&local_tv_sec);
-    strftime(timestr, sizeof (timestr), "%H:%M:%S", &ltime);
+    localtime_s(&ltime, &local_tv_sec);
+    strftime(timestr, sizeof(timestr), "%H:%M:%S", &ltime);
 
     printf("%s,%.6d len:%d\n", timestr, header->ts.tv_usec, header->len);
 
